@@ -61,12 +61,16 @@ public class Account {
     }
     
    
-    public List<Deposit> getDeposit(){
-     return movimenti.stream().filter(mov -> movimenti.getClass() == Deposit.class).collect(Collectors.toList());
+    public List<Operation> getDeposit(){
+     return movimenti.stream()
+            .filter(mov -> movimenti.getClass() == Deposit.class)
+            .collect(Collectors.toList());
     }
     
     public List<Operation> getWithdrawal(){
-     return movimenti.stream().filter(mov -> movimenti.getClass() == Withdrawal.class).collect(Collectors.toList()); 
+     return movimenti.stream()
+            .filter(mov -> movimenti.getClass() == Withdrawal.class)
+            .collect(Collectors.toList()); 
     }
 
     @Override
