@@ -68,8 +68,10 @@ public class Bank {
      * @return void 
      *
      */
+    
+    //inserire la parte relativa alla verifica del saldo
     public void withdrawal(int id,LocalDate data,Withdrawal w) throws InvalidCode{
-        if()
+        
         listaConti.get(listaConti.indexOf(getAccount(id).orElseThrow())).addWithdraw(w);
     }
     /**
@@ -103,5 +105,18 @@ public class Bank {
         return a.toString();
         
     }
-    
+    public double getTotalDeposit(){
+        for(Account a: listaConti){
+            a.getSaldo();
+        }
+    }
+    public void getAccounts(){
+        
+    }
+    public void getAccountsBalance(){
+        
+    }
+    public void perCentHigher(){
+        
+    }
 }

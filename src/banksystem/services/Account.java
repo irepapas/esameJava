@@ -66,7 +66,7 @@ public class Account {
     }
     
     public List<Operation> getWithdrawal(){
-      
+     return movimenti.stream().filter(mov -> movimenti.getClass() == Withdrawal.class).collect(Collectors.toList()); 
     }
 
     @Override
